@@ -13,7 +13,7 @@ DOCKERFILE="docker-compose-generator/linuxamd64.Dockerfile"
 # https://raw.githubusercontent.com/btcpayserver/btcpayserver-docker/dcg-latest/docker-compose-generator/linuxarm64v8.Dockerfile
 [[ "$(uname -m)" == "aarch64" ]] && DOCKERFILE="docker-compose-generator/linuxarm64v8.Dockerfile"
 echo "Building btcpayserver/docker-compose-generator:latest"
-git clone https://github.com/btcpayserver/btcpayserver-docker docker-compose-generator
+git clone https://github.com/jojupiter/btcpayserver-docker docker-compose-generator
 cd docker-compose-generator
 git checkout dcg-latest
 cd "$(dirname $DOCKERFILE)"
@@ -265,7 +265,7 @@ DOCKERFILE="amd64.Dockerfile"
 # https://raw.githubusercontent.com/btcpayserver/btcpayserver/v1.2.1/arm64v8.Dockerfile
 [[ "$(uname -m)" == "aarch64" ]] && DOCKERFILE="arm64v8.Dockerfile"
 echo "Building btcpayserver/btcpayserver:1.2.1$<BTCPAY_BUILD_CONFIGURATION>?"
-git clone https://github.com/btcpayserver/btcpayserver btcpayserver
+git clone https://github.com/jojupiter/custom-btcpay-eth btcpayserver
 cd btcpayserver
 git checkout v1.2.1
 cd "$(dirname $DOCKERFILE)"
